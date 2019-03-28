@@ -28,7 +28,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cassandra-spark" target="1.8" />
-      <module name="kafka-spark" target="1.5" />
+      <module name="kafka-spark" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
