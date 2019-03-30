@@ -42,6 +42,7 @@ public class SparkAPI {
         System.out.println(topology.describe());
         streams.start();
 
+        System.out.println("listen to kafka streams....");
     }
 
 
