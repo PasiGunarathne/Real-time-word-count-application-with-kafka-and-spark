@@ -46,4 +46,7 @@ public class SparkAPI {
     }
 
 
+    public void wordCount(){
+
+    }
 }
