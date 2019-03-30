@@ -42,14 +42,7 @@ public class SparkAPI {
         System.out.println(topology.describe());
         streams.start();
 
-
     }
-
-
-    public void wordCount(){
-
-    }
-
 
 
 }
