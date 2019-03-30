@@ -36,6 +36,11 @@ public class SparkAPI {
 
         wordCounts.toStream().to("word-count-output", Produced.with(Serdes.String(), Serdes.Long()));
 
+        KafkaStreams streams = new KafkaStreams(builder.build(), config);
+//        wordCountInput.print("","");
+        final Topology topology = builder.build();
+        System.out.println(topology.describe());
+        streams.start();
 
 
     }
