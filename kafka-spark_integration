@@ -1,0 +1,22 @@
+/opt/apache-kafka/kafka_2.11-2.2.0/
+
+1. bin/zookeeper-server-start.sh config/zookeeper.properties
+
+2. bin/kafka-server-start.sh config/server.properties
+
+3.1 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic word-count-output
+
+3.2 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic word-count-input
+
+4. bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic word-count-input --from-beginning
+
+5. bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic word-count-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+
+6. run kafka-spark 
+
+
+
+
+
+
+
